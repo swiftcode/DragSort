@@ -1,0 +1,25 @@
+import SwiftUI
+import PlaygroundSupport
+
+//Implementing the "I can't believe it can sort" sort
+
+class Swapper {
+    func swapTest() {
+        var array: [Int] = [10, 17, 1, 9, 3]
+        
+        for i in 0..<array.count {
+            for j in 0..<array.count {
+                if array[i] < array[j] {
+                    array.swapAt(i, j)
+                }
+                
+                print("\(i),\(j): \(array)")
+            }
+        }
+        
+        print("sorted --> \(array)")
+    }
+}
+
+var swapper = Swapper()
+swapper.swapTest()
